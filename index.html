@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/estilo.css">
+    <title>Pokemon</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>MEU POKÉMON</h1>
+    </div>
+
+    <div class="ralts">
+        <h2>RALTS</h2>
+        <h3>Número: 280</h3>
+        <img src="assets/img/ralts.png" alt="ralts">
+        <h4>Sentir Emoções</h3>
+    </div>
+
+
+    <div class="informacoes">
+        <h2>INFORMAÇÕES</h2>
+        <p class="nome">Nome: Ralts </p>
+        <p class="fraqueza">Fraqueza: Fantasmas</p>
+        <p class="poder">Poder: Hipnose</p>
+        <p class="ataque">Ataque: 45</p>
+        <p class="defesa">Defesa: 35</p>
+        <p class="velocidade">Velocidade: 40</p>
+
+        <p class="vida">Vida: </p>
+
+        <div class="barrafundo">
+            <div id="barra"></div>
+
+        </div>
+
+
+            <p class="energia">Energia: </p>
+
+        <div class="barrafundo2">
+            <div id="barra2"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="acoes">
+        <h2>AÇÕES</h2>
+        <button type="button" id="correr" onclick="correr()">CORRER</button>
+        <button type="button" id="andar" onclick="andar()">ANDAR</button>
+        <button type="button" id="comer" onclick="comer()">COMER</button>
+        <button type="button" id="dormir" onclick="dormir()">DORMIR</button>
+        <button type="button" id="dano" onclick="receberDano()">RECEBER DANO</button>
+        <button type="button" id="habilidade" onclick="atacar()">FAZER ATAQUE</button>        
+    </div>
+
+    <script>
+
+         var pokemon ={
+            nome: "Ralts",
+            fraqueza: "fantasma",
+            poder: "Hipnose",
+            velocidade: 40,
+            defesa: 35,
+            ataque: 45,
+            vida: 28,
+            energia: 166,
+         }
+
+         function andar(){
+                //posicao q esta mais 40(velocidade)
+                andar = this.posicao = this.posicao + this.velocidade 
+                andar = this.energia = this.energia - 1}
+
+            
+            function comer(){
+                //Ao comer, aumentar a energia;
+                comer = this.energia = this.energia + 8
+                
+            }
+            function dormir(){
+                //Ao dormir, recuperar energia;
+                dormir = this.energia = this.energia + 12
+
+            }
+            function correr(){
+                //Ao correr, diminuir energia
+                correr = this.posicao = this.posicao + (this.velocidade * 2) 
+                correr = this.energia = this.energia - 3}
+
+            
+            function atacar(){
+                //AO atacar, diminui energia
+               ataque =  this.energia = this.energia - 10}
+
+           function receberDano(){
+                //Ao receber dano, diminuir a vida;
+               dano =  this.vida = this.vida - 4}
+
+
+       var barra = document.querySelector("#barra")
+       var andar = document.querySelector("#andar")
+       var comer = document.querySelector("#comer")
+       var dormir = document.querySelector("#dormir")
+       var correr = document.querySelector("#correr")
+       var atacar = document.querySelector("#atacar")
+       var receberDano = document.querySelector("#receberDano")
+
+
+
+        
+    </script>
+   
+    
+</body>
+</html>
