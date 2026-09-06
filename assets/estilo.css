@@ -1,311 +1,499 @@
-*{
+
+* {
+
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+
 }
 
-body{
+
+body {
+
     margin-left: 100px;
+
 }
 
-.titulo{
+
+/* TÍTULO */
+
+.titulo {
+
     background-color: #70a0de;
     margin-left: -100px;
-    height: 60px;   
-    width: 1280px;
+    height: 60px;
+    width: 1366px;
+
 }
 
-.titulo h1{
+
+.titulo h1 {
+
     font-family: Arial, Helvetica, sans-serif;
     color: #0e418e;
     text-align: center;
     padding-top: 10px;
+
 }
+
+
+/* RALTS */
 
 .ralts {
+
     border: solid 1px;
     border-color: #90b2df;
     border-radius: 5px;
+
     width: 300px;
+
     margin-left: 30px;
     margin-top: 30px;
+
 }
 
-.ralts h2{
+
+.ralts h2 {
+
     color: #0e418e;
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 35px;
+
     margin-left: 80px;
     margin-top: 10px;
+
     padding: 15px;
-   
+
 }
 
-.ralts img{
+
+.ralts img {
+
     width: 200px;
     height: 240px;
-    margin-left: 75px;
+
     margin-top: 30px;
+
     padding: 15px;
+
     border: solid 1.5px;
     border-color: #70a0de;
+
     border-radius: 5px;
+
     margin-left: 50px;
+
 }
 
-.ralts h3{
+
+.ralts h3 {
+
     font-family: Arial, Helvetica, sans-serif;
+
     color: white;
+
     background-color: #70a0de;
+
     width: 135px;
+
     border-radius: 5px;
+
     margin-left: 80px;
+
     padding-left: 5px;
+
 }
 
-.ralts h4{
+
+.ralts h4 {
+
     font-family: Arial, Helvetica, sans-serif;
+
     color: white;
+
     background-color: #70a0de;
+
     width: 155px;
     height: 20px;
+
     border-radius: 5px;
+
     margin-left: 80px;
+
     padding-left: 15px;
+
     margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
-.informacoes{
+
+/* INFORMAÇÕES */
+
+.informacoes {
+
     border: solid 1px;
     border-color: #90b2df;
+
     border-radius: 5px;
+
     width: 300px;
-    height: 440px;
+    height: 510px;
+
     margin-left: 380px;
     margin-top: -437px;
+
     padding-left: 12px;
+
 }
 
-.informacoes h2{
+
+.informacoes h2 {
+
     padding-top: 27px;
     padding-left: 10px;
+
     color: #0e418e;
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 35px;
+
 }
 
-.nome{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 25px;
-}
 
-.poder{
+/* INFORMAÇÕES DO POKÉMON */
+
+.nome,
+.fraqueza,
+.poder,
+.ataque,
+.defesa,
+.velocidade {
+
     font-family: Arial, Helvetica, sans-serif;
+
     margin-left: 35px;
+
     border: solid 1px;
     border-color: #90b2df;
+
     border-radius: 5px;
+
     padding: 5px;
+
     width: 200px;
+
     text-align: center;
+
     margin-top: 15px;
+
 }
 
-.fraqueza{
+
+.nome {
+
+    margin-top: 25px;
+
+}
+
+
+/* VIDA */
+
+.vida {
+
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
+
     margin-top: 15px;
-}
-
-.ataque{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.defesa{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.velocidade{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.acoes{
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    width: 300px;
-    height: 460px;
-    margin-left: 730px;
-    margin-top: -438px;
-}
-
-.acoes h2{
-    padding-top: 27px;
-    padding-left: 85px;
-    color: #0e418e;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 35px;
-}
-
-#correr{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 25px;
-    background-color: red;
-    color: white;
-    margin-left: 50px;
-    height: 35px;
-}
-
-#andar{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 25px;
-    background-color: rgb(33, 192, 94);
-    color: white;
-    margin-left: 50px;
-    height: 35px;
 
 }
 
-#comer{
-     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 25px;
-    background-color: orange;
-    color: white;
-    margin-left: 50px;
-    height: 35px;
 
-}
+.barrafundo {
 
-#dormir{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 25px;
-    background-color: blue;
-    color: white;
-    margin-left: 50px;
-    height: 35px;
-
-}
-
-#dano{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 25px;
-    background-color: gray;
-    color: white;
-    margin-left: 50px;
-    height: 35px;
-
-}
-
-#habilidade{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
-    border: solid 1px;
-    border-color: #90b2df;
-    border-radius: 5px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    margin-top: 25px;
-    background-color: purple;
-    color: white;
-    margin-left: 50px;
-    height: 35px;
-
-}
-
-.barrafundo{
     margin-top: 10px;
+
     width: 90%;
     height: 20px;
-    background-color: rgb(245, 255, 140);
+
+    background-color: #eeeeee;
+
     border-radius: 10px;
-    border:  solid 1px;
+
+    border: solid 1px;
     border-color: rgb(188, 180, 180);
+
 }
 
-#barra{
-     width: 0%;
+
+#barra {
+
+    width: 0%;
+
     height: 100%;
-    background-color: #547dcc;
+
+    background-color: #e74c3c;
+
     border-radius: 20px;
+
     transition: width 0.3s;
+
 }
 
-.vida{
+
+/* ENERGIA */
+
+.energia {
+
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;   
+
+    margin-top: 15px;
+
+}
+
+
+.barrafundo2 {
+
+    margin-top: 10px;
+
+    width: 90%;
+    height: 20px;
+
+    background-color: #eeeeee;
+
+    border-radius: 10px;
+
+    border: solid 1px;
+    border-color: rgb(188, 180, 180);
+
+}
+
+
+#barra2 {
+
+    width: 0%;
+
+    height: 100%;
+
+    background-color: orange;
+
+    border-radius: 20px;
+
+    transition: width 0.3s;
+
+}
+
+
+/* AÇÕES */
+
+.acoes {
+
+    border: solid 1px;
+    border-color: #90b2df;
+
+    border-radius: 5px;
+
+    width: 300px;
+    height: 460px;
+
+    margin-left: 730px;
+    margin-top: -509px;
+
+}
+
+
+.acoes h2 {
+
+    padding-top: 27px;
+
+    padding-left: 85px;
+
+    color: #0e418e;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 35px;
+
+}
+
+
+/* BOTÃO CORRER */
+
+#correr {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: solid 1px;
+    border-color: #90b2df;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    width: 200px;
+    height: 35px;
+
+    text-align: center;
+
+    margin-top: 25px;
+    margin-left: 50px;
+
+    background-color: red;
+
+    color: white;
+
+}
+
+
+/* BOTÃO ANDAR */
+
+#andar {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: solid 1px;
+    border-color: #90b2df;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    width: 200px;
+    height: 35px;
+
+    text-align: center;
+
+    margin-top: 25px;
+    margin-left: 50px;
+
+    background-color: rgb(33, 192, 94);
+
+    color: white;
+
+}
+
+
+/* BOTÃO COMER */
+
+#comer {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: solid 1px;
+    border-color: #90b2df;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    width: 200px;
+    height: 35px;
+
+    text-align: center;
+
+    margin-top: 25px;
+    margin-left: 50px;
+
+    background-color: orange;
+
+    color: white;
+
+}
+
+
+/* BOTÃO DORMIR */
+
+#dormir {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: solid 1px;
+    border-color: #90b2df;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    width: 200px;
+    height: 35px;
+
+    text-align: center;
+
+    margin-top: 25px;
+    margin-left: 50px;
+
+    background-color: blue;
+
+    color: white;
+
+}
+
+
+/* BOTÃO RECEBER DANO */
+
+#dano {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: solid 1px;
+    border-color: #90b2df;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    width: 200px;
+    height: 35px;
+
+    text-align: center;
+
+    margin-top: 25px;
+    margin-left: 50px;
+
+    background-color: gray;
+
+    color: white;
+
+}
+
+
+/* BOTÃO ATAQUE */
+
+#habilidade {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: solid 1px;
+    border-color: #90b2df;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    width: 200px;
+    height: 35px;
+
+    text-align: center;
+
+    margin-top: 25px;
+    margin-left: 50px;
+
+    background-color: purple;
+
+    color: white;
+
+}
+
+
+/* EFEITO NOS BOTÕES */
+
+button:hover {
+
+    cursor: pointer;
+
+    opacity: 0.8;
+
 }

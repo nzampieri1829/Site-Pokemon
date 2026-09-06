@@ -1,118 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="assets/estilo.css">
-    <title>Pokemon</title>
+
+
+    <title>Meu Pokémon</title>
 </head>
+
 <body>
+
     <div class="titulo">
         <h1>MEU POKÉMON</h1>
     </div>
 
+
     <div class="ralts">
+
         <h2>RALTS</h2>
+
         <h3>Número: 280</h3>
-        <img src="assets/img/ralts.png" alt="ralts">
-        <h4>Sentir Emoções</h3>
+
+        <img src="assets/img/ralts.png" alt="Ralts">
+
+        <h4>Sentir Emoções</h4>
+
     </div>
 
 
     <div class="informacoes">
+
         <h2>INFORMAÇÕES</h2>
-        <p class="nome">Nome: Ralts </p>
-        <p class="fraqueza">Fraqueza: Fantasmas</p>
+
+        <p class="nome">Nome: Ralts</p>
+
+        <p class="fraqueza">Fraqueza: Fantasma</p>
+
         <p class="poder">Poder: Hipnose</p>
+
         <p class="ataque">Ataque: 45</p>
+
         <p class="defesa">Defesa: 35</p>
+
         <p class="velocidade">Velocidade: 40</p>
 
-        <p class="vida">Vida: </p>
+
+        <p class="vida">
+            Vida: <span id="valorVida">100</span>
+        </p>
 
         <div class="barrafundo">
             <div id="barra"></div>
-
         </div>
 
 
-            <p class="energia">Energia: </p>
+        <p class="energia">
+            Energia: <span id="valorEnergia">100</span>
+        </p>
 
         <div class="barrafundo2">
             <div id="barra2"></div>
-
         </div>
 
     </div>
 
 
     <div class="acoes">
+
         <h2>AÇÕES</h2>
-        <button type="button" id="correr" onclick="correr()">CORRER</button>
-        <button type="button" id="andar" onclick="andar()">ANDAR</button>
-        <button type="button" id="comer" onclick="comer()">COMER</button>
-        <button type="button" id="dormir" onclick="dormir()">DORMIR</button>
-        <button type="button" id="dano" onclick="receberDano()">RECEBER DANO</button>
-        <button type="button" id="habilidade" onclick="atacar()">FAZER ATAQUE</button>        
+
+        <button type="button" id="correr" onclick="correr()">
+            CORRER
+        </button>
+
+        <button type="button" id="andar" onclick="andar()">
+            ANDAR
+        </button>
+
+        <button type="button" id="comer" onclick="comer()">
+            COMER
+        </button>
+
+        <button type="button" id="dormir" onclick="dormir()">
+            DORMIR
+        </button>
+
+        <button type="button" id="dano" onclick="receberDano()">
+            RECEBER DANO
+        </button>
+
+        <button type="button" id="habilidade" onclick="atacar()">
+            FAZER ATAQUE
+        </button>
+
     </div>
 
-    <script>
 
-         var pokemon ={
-            nome: "Ralts",
-            fraqueza: "fantasma",
-            poder: "Hipnose",
-            velocidade: 40,
-            defesa: 35,
-            ataque: 45,
-            vida: 28,
-            energia: 166,
-         }
+<script>
 
-         function andar(){
-                //posicao q esta mais 40(velocidade)
-                andar = this.posicao = this.posicao + this.velocidade 
-                andar = this.energia = this.energia - 1}
+    // Criando um objeto para guardar todas as informações do Pokémon
+    var pokemon = {
 
-            
-            function comer(){
-                //Ao comer, aumentar a energia;
-                comer = this.energia = this.energia + 8
-                
-            }
-            function dormir(){
-                //Ao dormir, recuperar energia;
-                dormir = this.energia = this.energia + 12
+        nome: "Ralts",
+        fraqueza: "Fantasma",
+        poder: "Hipnose",
 
-            }
-            function correr(){
-                //Ao correr, diminuir energia
-                correr = this.posicao = this.posicao + (this.velocidade * 2) 
-                correr = this.energia = this.energia - 3}
+        velocidade: 40,
+        defesa: 35,
+        ataque: 45,
 
-            
-            function atacar(){
-                //AO atacar, diminui energia
-               ataque =  this.energia = this.energia - 10}
+        // Vida atual do Pokémon
+        vida: 100,
 
-           function receberDano(){
-                //Ao receber dano, diminuir a vida;
-               dano =  this.vida = this.vida - 4}
+        // Energia atual do Pokémon
+        energia: 100
+
+    };
 
 
-       var barra = document.querySelector("#barra")
-       var andar = document.querySelector("#andar")
-       var comer = document.querySelector("#comer")
-       var dormir = document.querySelector("#dormir")
-       var correr = document.querySelector("#correr")
-       var atacar = document.querySelector("#atacar")
-       var receberDano = document.querySelector("#receberDano")
+    // atualizar as barrinhas de Vida e Energia
+    function atualizarBarras() {
+
+        // Pegando a barrinha da Vida pelo ID "barra"
+        var barraVida = document.querySelector("#barra");
+
+        // Pegando a barrinha da Energia pelo ID "barra2"
+        var barraEnergia = document.querySelector("#barra2");
+
+        // Pegando o local onde aparece o número da Vida
+        var valorVida = document.querySelector("#valorVida");
+
+        // Pegando o local onde aparece o número da Energia
+        var valorEnergia = document.querySelector("#valorEnergia");
 
 
+        // Alterando a largura da barra de Vida de acordo com a vida do Pokémon
+        barraVida.style.width = pokemon.vida + "%";
 
-        
-    </script>
-   
-    
+        // Alterando a largura da barra de Energia de acordo com a energia do Pokémon
+        barraEnergia.style.width = pokemon.energia + "%";
+
+
+        // Mostrando o valor atual da Vida na tela
+        valorVida.innerHTML = pokemon.vida;
+
+        // Mostrando o valor atual da Energia na tela
+        valorEnergia.innerHTML = pokemon.energia;
+
+    }
+
+
+    //  acontece quando o botão ANDAR é clicado
+    function andar() {
+
+        // Diminui 5 pontos de energia do Pokémon
+        pokemon.energia = pokemon.energia - 5;
+
+        // Verifica se a energia ficou menor que 0
+        if (pokemon.energia < 0) {
+
+            // Se ficar menor que 0 energia fica em 0
+            pokemon.energia = 0;
+
+        }
+
+        // Atualiza a barrinha e o número da energia na tela
+        atualizarBarras();
+
+    }
+
+
+    //  acontece quando o botão CORRER é clicado
+    function correr() {
+
+        // Diminui 15 pontos de energia
+        pokemon.energia = pokemon.energia - 15;
+
+        // Verifica se a energia ficou menor que 0
+        if (pokemon.energia < 0) {
+
+            // Impede que a energia fique negativa
+            pokemon.energia = 0;
+
+        }
+
+        // Atualiza as barrinhas na tela
+        atualizarBarras();
+
+    }
+
+
+    // acontece quando o botão COMER é clicado
+    function comer() {
+
+        // Aumenta 10 pontos de energia
+        pokemon.energia = pokemon.energia + 10;
+
+        // Verifica se a energia passou de 100
+        if (pokemon.energia > 100) {
+
+            // Impede que a energia passe de 100
+            pokemon.energia = 100;
+
+        }
+
+        // Atualiza as barrinhas na tela
+        atualizarBarras();
+
+    }
+
+
+    // acontece quando o botão DORMIR é clicado
+    function dormir() {
+
+        // Aumenta 20 pontos de energia
+        pokemon.energia = pokemon.energia + 20;
+
+        // Verifica se a energia passou de 100
+        if (pokemon.energia > 100) {
+
+            // Impede que a energia passe de 100
+            pokemon.energia = 100;
+
+        }
+
+        // Atualiza as barrinhas na tela
+        atualizarBarras();
+
+    }
+
+
+    //  acontece quando o botão FAZER ATAQUE é clicado
+    function atacar() {
+
+        // Diminui 10 pontos da energia ao fazer um ataque
+        pokemon.energia = pokemon.energia - 10;
+
+        // Verifica se a energia ficou menor que 0
+        if (pokemon.energia < 0) {
+
+            // Impede que a energia fique negativa
+            pokemon.energia = 0;
+
+        }
+
+        // Atualiza as barrinhas na tela
+        atualizarBarras();
+
+    }
+
+
+    // Função que acontece quando o botão RECEBER DANO é clicado
+    function receberDano() {
+
+        // Diminui 10 pontos da Vida do Pokémon
+        pokemon.vida = pokemon.vida - 10;
+
+        // Verifica se a vida ficou menor que 0
+        if (pokemon.vida < 0) {
+
+            // Impede que a vida fique negativa
+            pokemon.vida = 0;
+
+        }
+
+        // Atualiza as barrinhas na tela
+        atualizarBarras();
+
+    }
+
+
+    //  barrinhas começarem mostrando 100%
+    atualizarBarras();
+
+</script>
+
+
 </body>
+
 </html>
